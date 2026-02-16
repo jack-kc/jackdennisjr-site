@@ -20,21 +20,31 @@ export default function Home() {
         </p>
       </div>
 
-      <section className="mt-12 rounded-xl border bg-white p-6">
+      {latestNow?.items?.length ? (
+        <section className="mt-12 rounded-xl border bg-white p-6">
         <div className="flex items-baseline justify-between gap-4">
           <h2 className="text-lg font-semibold">Now</h2>
           <div className="text-sm text-neutral-500">Updated {latestNow?.date}</div>
         </div>
 
         <dl className="mt-4 space-y-3">
-          {latestNow?.items.map((item) => (
-            <div key={item.label} className="grid grid-cols-1 gap-1 sm:grid-cols-[110px_1fr]">
+        {(latestNow?.items ?? []).slice(0, 3).map((item, idx) => (
+          <div key={`${item.label}-${idx}`} className="grid grid-cols-1 gap-1 sm:grid-cols-[110px_1fr]">
               <dt className="text-sm font-medium text-neutral-700">{item.label}</dt>
               <dd className="text-sm text-neutral-700">{item.value}</dd>
             </div>
           ))}
         </dl>
+
+        <div className="mt-5">
+          <a href="/now" className="text-sm font-medium text-neutral-700 hover:underline">
+            See history →
+          </a>
+        </div>
       </section>
+      ) : null}
+
+      
     </>
   );
 }

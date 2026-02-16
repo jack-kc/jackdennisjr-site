@@ -13,6 +13,10 @@ export const nowUpdates = [
       {
         label: "Writing",
         value: "Short notes as I learn in public.",
+      },,
+      {
+        label: "Learning",
+        value: "Thinking in systems.",
       },
     ],
   },
