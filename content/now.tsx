@@ -23,7 +23,7 @@ export const nowUpdates: NowUpdate[] = [
       {
         label: "Writing",
         value: "Short notes as I learn in public.",
-      },,
+      },
       {
         label: "Exploring",
         value: "Thinking in Systems.",
