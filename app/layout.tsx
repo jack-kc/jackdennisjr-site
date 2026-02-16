@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="border-b">
           <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-6">
             <Link href="/" className="text-base font-semibold">
-              Jack Dennis Jr.
+              Jack Dennis, Jr.
             </Link>
 
             <nav className="flex gap-4 text-sm text-neutral-700">
