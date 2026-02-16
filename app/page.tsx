@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <h1 className="text-4xl font-semibold tracking-tight">
-        Jack Dennis Jr.
+        Jack Dennis, Jr.
       </h1>
 
       <p className="mt-6 text-lg leading-7 text-neutral-700">
