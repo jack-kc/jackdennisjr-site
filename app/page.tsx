@@ -1,6 +1,7 @@
-import { now } from "../content/now";
+import { nowUpdates } from "../content/now";
 
 export default function Home() {
+  const latestNow = nowUpdates[0];
   return (
     <>
       <h1 className="text-4xl font-semibold tracking-tight">Jack Dennis, Jr.</h1>
@@ -18,15 +19,15 @@ export default function Home() {
           <span className="font-medium">Building:</span> A personal site that stays stable while the content evolves.
         </p>
       </div>
-      
+
       <section className="mt-12 rounded-xl border bg-white p-6">
         <div className="flex items-baseline justify-between gap-4">
           <h2 className="text-lg font-semibold">Now</h2>
-          <div className="text-sm text-neutral-500">Updated {now.updated}</div>
+          <div className="text-sm text-neutral-500">Updated {latestNow?.date}</div>
         </div>
 
         <dl className="mt-4 space-y-3">
-          {now.items.map((item) => (
+          {latestNow?.items.map((item) => (
             <div key={item.label} className="grid grid-cols-1 gap-1 sm:grid-cols-[110px_1fr]">
               <dt className="text-sm font-medium text-neutral-700">{item.label}</dt>
               <dd className="text-sm text-neutral-700">{item.value}</dd>
