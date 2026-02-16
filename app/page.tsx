@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16">
+    <>
       <h1 className="text-4xl font-semibold tracking-tight">Jack Dennis Jr.</h1>
 
       <p className="mt-6 text-lg leading-7 text-neutral-700">
@@ -16,10 +16,6 @@ export default function Home() {
           <span className="font-medium">Building:</span> A personal site that stays stable while the content evolves.
         </p>
       </div>
-
-      <footer className="mt-16 border-t pt-6 text-sm text-neutral-500">
-        Views are my own and do not represent my employer.
-      </footer>
-    </main>
+    </>
   );
 }
